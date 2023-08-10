@@ -10,7 +10,7 @@ font-family: 'Work Sans', sans-serif; */
 body {
   font-size: 1.2rem;
   font-family: 'Work Sans', sans-serif;
-  min-height: 4000px;
+  /* min-height: 4000px; */
 
 }
 
@@ -63,7 +63,7 @@ body {
   background-color: var(--pink);
 }
 
-
+/* navbar */
 .mynavbar {
   background-color: rgba(255, 255, 255, 0.4) !important;
   backdrop-filter: blur(4px);
@@ -417,8 +417,8 @@ body {
   }
 
   .simply-countdown>.simply-section {
-    padding: 40px;
-    margin: 3px;
+    padding: 35px;
+    margin: 2px;
   }
 
   .timeline li .timeline-image {
