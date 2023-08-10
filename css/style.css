@@ -413,12 +413,12 @@ body {
 /* mobile phone */
 @media (max-width:576px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
 
   .simply-countdown>.simply-section {
     padding: 35px;
-    margin: 2px;
+    margin: 1px;
   }
 
   .timeline li .timeline-image {
