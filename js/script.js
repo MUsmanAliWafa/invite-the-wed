@@ -57,10 +57,10 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {}
   rootElement.style.scrollBehavior = 'smooth';
-  localStorage.setItem('open', 'true');
+  localStorage.setItem('opened', 'true');
 }
 
-if (!localStorage.getItem('open')) {
+if (!localStorage.getItem('opened')) {
   disableScroll();
 }
 
