@@ -83,3 +83,11 @@ window.addEventListener("load", function() {
     })
   });
 });
+
+
+
+
+
+// tahun
+let currentYear = new Date().getFullYear();
+document.querySelector(".copyright-year").textContent = currentYear;
