@@ -156,6 +156,14 @@
               Alamat: GOR PKPSO Jember. <br />
               Jl. Nusantara, Kec. Kaliwates, Kota. Jember
             </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3949.1859281453653!2d113.6762506!3d-8.1840171!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd696a820ab01c9%3A0x2ea6ed605f8ab90e!2sGOR%20PKPSO%20Jember!5e0!3m2!1sid!2sid!4v1693583252873!5m2!1sid!2sid"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
             <a
               href="https://goo.gl/maps/wHfJwYtiYDEWVEMo8"
               target="_blank"
@@ -466,6 +474,37 @@
             <button class="btn">Kirim</button>
           </div>
         </form>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6">
+            <div id="disqus_thread"></div>
+            <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+              (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                  s = d.createElement("script");
+                s.src = "https://the-wed.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript
+              >Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript"
+                >comments powered by Disqus.</a
+              ></noscript
+            >
+          </div>
+        </div>
       </div>
     </section>
 
@@ -549,10 +588,10 @@
 
     <div id="audio-container" class="audio-box">
       <audio id="song" autoplay loop>
-        <source src="audio/Beautiful-in-white.mp3" type="audio/mp3"/>
+        <source src="audio/Beautiful-in-white.mp3" type="audio/mp3" />
       </audio>
 
-      <div id="audio-wrapper" class="audio-icon-wrapper" style="display: none;">
+      <div id="audio-wrapper" class="audio-icon-wrapper" style="display: none">
         <i class="bi bi-disc"></i>
       </div>
     </div>
