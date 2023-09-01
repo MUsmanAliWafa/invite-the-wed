@@ -39,9 +39,15 @@ offcanvas.addEventListener('hidden.bs.offcanvas', function () {
 });
 
 
+
 // disablescroll
 
 const rootElement = document.querySelector(":root");
+const song = document.querySelector('#song');
+const audioIcon = document.querySelector('.bi-disc')
+const audoIconWrapper = document.querySelector('.audio-icon-wrapper');
+let isPlaying = false;
+
 
 function disableScroll() {
   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -57,30 +63,53 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {}
   rootElement.style.scrollBehavior = 'smooth';
-  localStorage.setItem('opened', 'true');
+  playAudio();
+  // localStorage.setItem('opened', 'true');
 }
 
-if (!localStorage.getItem('opened')) {
-  disableScroll();
+function playAudio() {
+  song.volume = 0.3;
+  audoIconWrapper.style.display = 'flex';
+  song.play();
+  isPlaying = true;
 }
+
+// buat logic click song
+audoIconWrapper.onclick = function () {
+  if (isPlaying) {
+    song.pause();
+    audioIcon.classList.remove('bi-disc');
+    audioIcon.classList.add('bi-pause-circle');
+  } else {
+    song.play();
+    audioIcon.classList.add('bi-disc');
+    audioIcon.classList.remove('bi-pause-circle');
+  }
+
+  isPlaying = !isPlaying;
+}
+
+// if (!localStorage.setItem('opened')) {
+//   disableScroll();
+// }
 
 disableScroll();
 
 
 // form
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   const form = document.getElementById('my-form');
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     const data = new FormData(form);
     const action = e.target.action;
     fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      alert("Konfirmasi kehadiran berhasil terkirim!");
-    })
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Konfirmasi kehadiran berhasil terkirim!");
+      })
   });
 });
 
